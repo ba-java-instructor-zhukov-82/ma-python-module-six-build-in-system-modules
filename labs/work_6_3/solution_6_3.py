@@ -7,7 +7,7 @@ print(sys.getsizeof('abc'))  # check and print (bytes) size of string object –
 # n variable should be received as script argument
 # n variable default value set as 11 in case of read sys argument fail
 try:
-    name, n = sys.argv  # Unpack into 2 variables name and n system arguments
+    name, n, *varargs = sys.argv  # Unpack into 2 variables name and n system arguments
 except IndexError:
     n = 11  # Set default value
 
